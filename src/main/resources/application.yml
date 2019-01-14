@@ -1,3 +1,5 @@
+server:
+  port: 8901
 spring:
   application:
     name: microservice-config-server
@@ -8,5 +10,9 @@ spring:
           uri: https://github.com/yyx-cloud/spring-cloud-config.git
           username: yyx19941129
           password: wo00abdaWw
-server:
-  port: 8901
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
